@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231218 10:58:03.438" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231218 12:01:47.882" rpa="false" schemaversion="4">
 <suite id="s1" name="Automationtestingpractice" source="C:\Users\amanda.delcorco\Project robot\robotproject\tests\automationtestingpractice.robot">
-<test id="s1-t1" name="Fill Writing Form" line="11">
+<test id="s1-t1" name="Fill Writing Form" line="10">
 <kw name="Open automation Page" library="automation_page">
 <kw name="Browser" library="common_elements">
 <arg>${AUTOMATION_URL}</arg>
@@ -10,19 +10,19 @@
 <arg>${AUTOMATION_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231218 10:58:03.784" level="INFO">Opening browser 'Chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20231218 10:58:03.784" endtime="20231218 10:58:11.526"/>
+<msg timestamp="20231218 12:01:48.284" level="INFO">Opening browser 'Chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20231218 12:01:48.284" endtime="20231218 12:01:56.980"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:03.784" endtime="20231218 10:58:11.526"/>
+<status status="PASS" starttime="20231218 12:01:48.282" endtime="20231218 12:01:56.980"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:03.783" endtime="20231218 10:58:11.526"/>
+<status status="PASS" starttime="20231218 12:01:48.282" endtime="20231218 12:01:56.980"/>
 </kw>
 <kw name="Maximize Window" library="common_elements">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231218 10:58:11.527" endtime="20231218 10:58:11.652"/>
+<status status="PASS" starttime="20231218 12:01:56.981" endtime="20231218 12:01:57.104"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:11.527" endtime="20231218 10:58:11.652"/>
+<status status="PASS" starttime="20231218 12:01:56.980" endtime="20231218 12:01:57.104"/>
 </kw>
 <kw name="Fill form" library="automation_page">
 <arg>Amanda</arg>
@@ -36,10 +36,10 @@
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231218 10:58:11.655" level="INFO">Typing text 'Amanda' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20231218 10:58:11.654" endtime="20231218 10:58:11.756"/>
+<msg timestamp="20231218 12:01:57.106" level="INFO">Typing text 'Amanda' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20231218 12:01:57.106" endtime="20231218 12:01:57.221"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:11.653" endtime="20231218 10:58:11.756"/>
+<status status="PASS" starttime="20231218 12:01:57.105" endtime="20231218 12:01:57.221"/>
 </kw>
 <kw name="Insert Text" library="common_elements">
 <arg>${email_field}</arg>
@@ -48,10 +48,10 @@
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231218 10:58:11.757" level="INFO">Typing text 'amanda.test@test.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20231218 10:58:11.757" endtime="20231218 10:58:11.904"/>
+<msg timestamp="20231218 12:01:57.222" level="INFO">Typing text 'amanda.test@test.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20231218 12:01:57.222" endtime="20231218 12:01:57.326"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:11.756" endtime="20231218 10:58:11.904"/>
+<status status="PASS" starttime="20231218 12:01:57.221" endtime="20231218 12:01:57.326"/>
 </kw>
 <kw name="Insert Text" library="common_elements">
 <arg>${phone_field}</arg>
@@ -60,10 +60,10 @@
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231218 10:58:11.905" level="INFO">Typing text '551176267282' into text field 'id=phone'.</msg>
-<status status="PASS" starttime="20231218 10:58:11.904" endtime="20231218 10:58:12.002"/>
+<msg timestamp="20231218 12:01:57.327" level="INFO">Typing text '551176267282' into text field 'id=phone'.</msg>
+<status status="PASS" starttime="20231218 12:01:57.327" endtime="20231218 12:01:57.417"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:11.904" endtime="20231218 10:58:12.002"/>
+<status status="PASS" starttime="20231218 12:01:57.326" endtime="20231218 12:01:57.417"/>
 </kw>
 <kw name="Insert Text" library="common_elements">
 <arg>${address_field}</arg>
@@ -72,16 +72,16 @@
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231218 10:58:12.003" level="INFO">Typing text 'Rua Amendoada,55' into text field '//*[@id="textarea"]'.</msg>
-<status status="PASS" starttime="20231218 10:58:12.002" endtime="20231218 10:58:12.089"/>
+<msg timestamp="20231218 12:01:57.418" level="INFO">Typing text 'Rua Amendoada,55' into text field '//*[@id="textarea"]'.</msg>
+<status status="PASS" starttime="20231218 12:01:57.418" endtime="20231218 12:01:57.504"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:12.002" endtime="20231218 10:58:12.089"/>
+<status status="PASS" starttime="20231218 12:01:57.418" endtime="20231218 12:01:57.505"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:11.653" endtime="20231218 10:58:12.089"/>
+<status status="PASS" starttime="20231218 12:01:57.105" endtime="20231218 12:01:57.505"/>
 </kw>
-<status status="PASS" starttime="20231218 10:58:03.783" endtime="20231218 10:58:12.089"/>
+<status status="PASS" starttime="20231218 12:01:48.282" endtime="20231218 12:01:57.505"/>
 </test>
-<status status="PASS" starttime="20231218 10:58:03.439" endtime="20231218 10:58:12.090"/>
+<status status="PASS" starttime="20231218 12:01:47.885" endtime="20231218 12:01:57.505"/>
 </suite>
 <statistics>
 <total>

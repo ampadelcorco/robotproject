@@ -33,27 +33,11 @@ Click on Element from list by value
     [Arguments]    ${list_locator}    ${value}
     ${element}=     Get Element from list by value    ${list_locator}    ${value}
     Click Element    ${element}
-    
-#Click on Element Child from list by position
-#    [Arguments]    ${list_locator}    ${position}    ${child}
-#    ${element}=     Get Element from list by position    ${list_locator}    ${position}
-#    Click Element      ${element}[${child}]  
-
 Get Element from list by position
     [Arguments]    ${list_locator}    ${position}     
     ${elements}=    Get WebElements    ${list_locator}     
     ${element}=     Get From List    ${elements}  ${position}   
     [Return]        ${element}
-
-#Get Element from list by value
-#    [Arguments]    ${list_locator}    ${value}     
-#    ${elements}=    Get WebElements    ${list_locator}
-#    FOR    ${element}    IN    @{elements}
-#      ${text}=    Get Text    ${element}
-#        Run Keyword If    '${text}' == '${value}'    Return From Keyword    ${element}
-#    END
-#    Fail    The value is not in the list: ${value}
-
 Get Element from list by value
     [Arguments]    ${list_locator}    ${value}     
     ${elements}=    Get WebElements    ${list_locator}

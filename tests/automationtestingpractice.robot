@@ -22,7 +22,7 @@ Test blog form page
         Choosing a country    Brazil
         Choosing color    White
         Validate table cell row and column   7    1
-        Validate If Table Cell Have The Especified Value   Javascript
+        Validate Especified Value   Javascript
         Select Page from Table Pages    3
         Mark checkbox based on value in Table    Product 14
         Click Submit Button

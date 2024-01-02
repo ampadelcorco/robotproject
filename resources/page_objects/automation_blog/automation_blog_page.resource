@@ -36,19 +36,19 @@ Open blog automation Page
 
 Fill name field 
     [Arguments]    ${name}
-    Input Text   ${name_field}   ${name}
+    Insert Text   ${name_field}   ${name}
 
 Fill email field
     [Arguments]    ${email}
-    Input Text   ${email_field}  ${email}
+    Insert Text   ${email_field}  ${email}
 
 Fill phone number field
     [Arguments]    ${phone}
-    Input Text   ${phone_field}  ${phone}
+    Insert Text   ${phone_field}  ${phone}
 
 Fill address field
     [Arguments]    ${address}
-    Input Text   ${address_field}  ${address}
+    Insert Text   ${address_field}  ${address}
 
 Choosing day of the week by position
     [Arguments]    ${position}
@@ -85,7 +85,7 @@ Validate table cell row and column
     Validate Table Cell Value    ${book_table}    ${row}    ${col}            
     Log    Actual value in the cell: ${actualValue}
 
-Validate If Table Cell Have The Especified Value
+Validate Especified Value
     [Arguments]    ${value}
     Get Table Cell By Value    ${web_table_locator}    ${value}
     Validate If Table Cell Have The Expected Value    ${value}   

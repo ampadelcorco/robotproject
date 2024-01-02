@@ -82,9 +82,8 @@ Choosing color
 Validate table cell row and column
     [Arguments]    ${row}    ${col}
     ${actualValue}=    Get cell by position   ${web_table_locator}    ${row}    ${col}
-    Validate Table Cell Value    ${book_table}    ${row}    ${col}            
-    Log    Actual value in the cell: ${actualValue}
-
+    Validate Table Cell Value    ${book_table}    ${row}    ${col}
+    
 Validate Especified Value
     [Arguments]    ${value}
     Get Table Cell By Value    ${web_table_locator}    ${value}

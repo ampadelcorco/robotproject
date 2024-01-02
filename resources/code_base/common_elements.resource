@@ -1,5 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    BuiltIn
+Library    OperatingSystem
+Library    Collections
+Library    DateTime 
+Resource    ../../../../Downloads/tables.resource
 
 *** Keywords ***
 
@@ -25,10 +30,6 @@ Maximize Window
 Go Back Page
     Go Back
 
-Wait Until
-    [Arguments]    ${text}
-    Wait Until Page Contains    ${text}
-
 Wait Until Text Visible
     [Arguments]    ${text}
     Wait Until Page Contains    ${text}
@@ -36,6 +37,10 @@ Wait Until Text Visible
 Should Contain Element
     [Arguments]    ${locator}
     Page Should Contain Element    ${locator}
+
+Validate Disabled Elemente
+    [Arguments]    ${locator}
+    Element Should Be Disabled    ${locator}
 
 Wait Until Element Visible
     [Arguments]    ${locator}

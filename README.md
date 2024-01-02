@@ -18,6 +18,3 @@ Robot Framework Language Server
 
 Selenium library install
 pip install robotframework-seleniumlibrary
-
-Installation:
-Forneça instruções passo a passo para a instalação e configuração do ambiente de desenvolvimento.

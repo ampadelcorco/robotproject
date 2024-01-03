@@ -19,9 +19,7 @@ Select List Item With Index
 
 Insert Text on Element from list by value
     [Arguments]    ${list_locator}    ${value}     ${text}
-    Log    Getting element for value: ${value}
     ${element}=     Get Element From Multiline String    ${list_locator}    ${value}
-    Log    Got element: ${element}
     Insert Text    ${element}    ${text}
 
 Click on Element from list by position

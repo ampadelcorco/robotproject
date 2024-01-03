@@ -3,8 +3,7 @@ Library    SeleniumLibrary
 Library    BuiltIn
 Library    OperatingSystem
 Library    Collections
-Library    DateTime 
-Resource    ../../../../Downloads/tables.resource
+Library    DateTime
 
 *** Keywords ***
 

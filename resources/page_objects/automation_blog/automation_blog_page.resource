@@ -22,13 +22,9 @@ ${submit_button}                 class=outside_container .buttons_reverse input
 ${pagination_table_locator}      id=productTable
 ${web_table_locator}             class=widget-content > table
 ${pagination_table_page}         class=pagination > li
-${td_position}                   4
 ${rowCount}                      xpath://table[@name='BookTable']/tbody/tr
 ${colCount}                      xpath://table[@name='BookTable']/tbody/tr[1]/th
 ${book_table}                    BookTable
-${TABLEHEADER}                   BookName
-${ROW1}                          2
-${COL1}                          3
 
 *** Keywords ***
 Open blog automation Page
@@ -79,11 +75,11 @@ Choosing color
     [Arguments]    ${value}   
     Select Value From List by label   ${color_list_locator}    ${value}
 
-Validate table cell row and column
-    [Arguments]    ${row}    ${col}
+Validate table
+    [Arguments]    ${row}    ${col}   ${expected_value}
     ${actualValue}=    Get cell by position   ${web_table_locator}    ${row}    ${col}
     Validate Table Cell Value    ${book_table}    ${row}    ${col}
-    
+
 Validate Especified Value
     [Arguments]    ${value}
     Get Table Cell By Value    ${web_table_locator}    ${value}
@@ -93,6 +89,6 @@ Select Page from Table Pages
     [Arguments]    ${pageNumber}
     Change Page In Pagination Table    ${pagination_table_page}    ${pageNumber}
 
-Mark checkbox based on value in Table
+Click checkbox table by value
     [Arguments]    ${value}
-    Toggle Checkbox Based on Value in Table    ${pagination_table_locator}   ${value}    ${td_position}
+    Toggle Checkbox Based on Value in Table    ${pagination_table_locator}   ${value}    4

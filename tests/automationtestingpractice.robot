@@ -21,8 +21,8 @@ Test blog form page
         Choosing day of the week by value    Monday
         Choosing a country    Brazil
         Choosing color    White
-        Validate table cell row and column   7    1
+        Validate table   7    1
         Validate Especified Value   Javascript
-        Select Page from Table Pages    3
-        Mark checkbox based on value in Table    Product 14
+        Select Page from Table Pages    3   #Fazer por valor tambem
+        Click checkbox table by value    Product 14
         Click Submit Button

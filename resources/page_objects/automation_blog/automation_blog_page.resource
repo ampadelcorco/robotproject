@@ -3,6 +3,7 @@ Resource   ../../code_base/common_elements.resource
 Resource   ../../code_base/common_list.resource
 Resource   ../../code_base/common_table.resource
 Library    String
+Library    XML
 
 *** Variables ***
 ${BROWSER}                       Chrome
@@ -21,10 +22,14 @@ ${frame_locator}                 class=widget-content iframe#frame-one796456169
 ${submit_button}                 class=outside_container .buttons_reverse input
 ${pagination_table_locator}      id=productTable
 ${web_table_locator}             class=widget-content > table
+${web_table_header_locator}      class=widget-content > table tbody tr:nth-of-type(1) th
+${web_table_locator_tr}          class=widget-content > table tr
 ${pagination_table_page}         class=pagination > li
 ${rowCount}                      xpath://table[@name='BookTable']/tbody/tr
 ${colCount}                      xpath://table[@name='BookTable']/tbody/tr[1]/th
 ${book_table}                    BookTable
+${variavel1}                     class=widget-content > table tbody tr
+${variavel2}                     :nth-of-type(1) th
 
 *** Keywords ***
 Open blog automation Page
@@ -54,6 +59,17 @@ Choosing day of the week by value
     [Arguments]    ${value}
     Click on Element from list by value    ${days_locator}    ${value}
 
+#Validate Especified Value by row and column value
+#    [Arguments]     ${row_item}    ${column_item}    ${expected_value}
+#    ${actual_Value}=  Get Table Cell By row and column value  ${web_table_locator}    ${row_item}    ${column_item}
+#    Validate value  ${actual_Value}    ${expected_value}
+
+Validate table temporary
+    [Arguments]    ${row_item}
+    #${header}=  Append Variables    ${variavel1}    ${variavel2}
+    #Get column index on table body by text     ${header}    ${column_item}
+    Get rows on table without header by text    ${web_table_locator}    ${row_item}     
+
 Choose Gender option
     [Arguments]    ${gender_option}
     ${gender_option_lower}=    Convert To Lower Case    ${gender_option}
@@ -75,20 +91,20 @@ Choosing color
     [Arguments]    ${value}   
     Select Value From List by label   ${color_list_locator}    ${value}
 
-Validate table
+Validate cell value by row and column
     [Arguments]    ${row}    ${col}   ${expected_value}
     ${actualValue}=    Get cell by position   ${web_table_locator}    ${row}    ${col}
-    Validate Table Cell Value    ${book_table}    ${row}    ${col}
+    Validate value    ${actualValue}    ${expected_value}
 
-Validate Especified Value
-    [Arguments]    ${value}
-    Get Table Cell By Value    ${web_table_locator}    ${value}
-    Validate If Table Cell Have The Expected Value    ${value}   
+#Validate Especified Value
+#    [Arguments]    ${value}
+#    Get Table Cell By Value    ${web_table_locator}    ${value}
+#    Validate If Table Cell Have The Expected Value    ${value}   
 
-Select Page from Table Pages
+Select Page from Table page number 
     [Arguments]    ${pageNumber}
-    Change Page In Pagination Table    ${pagination_table_page}    ${pageNumber}
+    Click Page In Pagination Table    ${pagination_table_page}    ${pageNumber}
 
 Click checkbox table by value
-    [Arguments]    ${value}
-    Toggle Checkbox Based on Value in Table    ${pagination_table_locator}   ${value}    4
+    [Arguments]    ${valueToFind}    ${row}    ${col}
+    Toggle Checkbox Based on Value in Table    ${pagination_table_locator}   ${valueToFind}    ${row}    ${col}    

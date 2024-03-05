@@ -41,6 +41,14 @@ Validate Disabled Elemente
     [Arguments]    ${locator}
     Element Should Be Disabled    ${locator}
 
+Validate value
+    [Arguments]    ${actual_Value}    ${expected_Value}
+    Should Be Equal As Strings    ${actual_Value}  ${expected_Value}
+
+Click Checkbox
+     [Arguments]    ${locator}
+     Select Checkbox    ${locator}
+    
 Wait Until Element Visible
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}

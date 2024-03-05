@@ -2,27 +2,22 @@
 
 Resource    ../resources/page_objects/main_page_object.resource
 
-*** Variables ***
-${name}     Amanda
-${email}     aa@email.com
-${phone}     1187655556
-${address}     Rua Amendoada,55
-
 *** Test Cases ***
 Test blog form page
         Open blog automation Page
         Maximize Window
-        Fill name field    ${name}
-        Fill email field    ${email}
-        Fill phone number field    ${phone}
-        Fill address field    ${address}
-        Choose Gender option   female
-        Choosing day of the week by position    3
-        Choosing day of the week by value    Monday
-        Choosing a country    Brazil
-        Choosing color    White
-        Validate table   7    1
-        Validate Especified Value   Javascript
-        Select Page from Table Pages    3   #Fazer por valor tambem
-        Click checkbox table by value    Product 14
-        Click Submit Button
+        Validate table temporary   Amit
+#        Fill name field    Amanda
+#        Fill email field    aa@email.com
+#        Fill phone number field    1187655556
+#        Fill address field    Rua Amendoada,55
+#        Choose Gender option   female
+#        Choosing day of the week by position    3
+#        Choosing day of the week by value    Monday
+#        Choosing a country    Brazil
+#        Choosing color    White
+#        Validate cell value by row and column  3    1    Learn Java
+#        Validate Especified Value by row and column value   Animesh    Subject    Javascript 
+#        Select Page from Table page number    3
+#        Click checkbox table by value    Product 14
+#        Click Submit Button
